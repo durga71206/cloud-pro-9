@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Pet Care</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+
+    <section id="loginSection" class="page">
+
+        <div class="login-box">
+
+            <h1>🐾 Cloud Pet Care</h1>
+
+            <h2>Pet Care Appointment System</h2>
+
+            <p>Book care services for your pet</p>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <button
+                onclick="register()"
+                class="register-btn"
+            >
+                Register
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboardSection" class="hidden">
+
+        <header>
+
+            <div>
+                <h1>🐾 Cloud Pet Care</h1>
+                <p>Pet Care Appointment Management</p>
+            </div>
+
+            <button
+                onclick="logout()"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <!-- PET DETAILS -->
+
+            <div class="form-box">
+
+                <h2>🐶 Pet Details</h2>
+
+                <input
+                    type="text"
+                    id="petName"
+                    placeholder="Pet Name"
+                >
+
+                <select id="petType">
+
+                    <option value="">
+                        Select Pet Type
+                    </option>
+
+                    <option value="Dog">
+                        Dog
+                    </option>
+
+                    <option value="Cat">
+                        Cat
+                    </option>
+
+                    <option value="Rabbit">
+                        Rabbit
+                    </option>
+
+                    <option value="Bird">
+                        Bird
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+                <input
+                    type="text"
+                    id="breed"
+                    placeholder="Breed"
+                >
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Pet Age"
+                >
+
+            </div>
+
+
+            <!-- APPOINTMENT -->
+
+            <div class="form-box">
+
+                <h2>📅 Book Appointment</h2>
+
+                <select id="service">
+
+                    <option value="">
+                        Select Service
+                    </option>
+
+                    <option value="Veterinary Consultation">
+                        Veterinary Consultation
+                    </option>
+
+                    <option value="Vaccination">
+                        Vaccination
+                    </option>
+
+                    <option value="Grooming">
+                        Grooming
+                    </option>
+
+                    <option value="Dental Care">
+                        Dental Care
+                    </option>
+
+                    <option value="Health Checkup">
+                        Health Checkup
+                    </option>
+
+                    <option value="Emergency Visit">
+                        Emergency Visit
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="date"
+                    id="appointmentDate"
+                >
+
+
+                <input
+                    type="time"
+                    id="appointmentTime"
+                >
+
+
+                <textarea
+                    id="reason"
+                    placeholder="Reason for appointment"
+                ></textarea>
+
+
+                <button onclick="bookAppointment()">
+                    Book Appointment
+                </button>
+
+            </div>
+
+
+            <!-- APPOINTMENT LIST -->
+
+            <div class="appointments-box">
+
+                <h2>📋 My Appointments</h2>
+
+                <div id="appointmentList">
+
+                    <p>
+                        No appointments available.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <script
+        type="module"
+        src="script.js">
+    </script>
+
+</body>
+
+</html>
